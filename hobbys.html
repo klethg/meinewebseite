@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Hobbys und Interessen</title>
+
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+<h1>Meine Hobbys und Interessen</h1>
+
+
+<div class="hobby">
+
+    <button class="hobby-button" onclick="toggleText(this)">
+        Segelfliegen <span>+</span>
+    </button>
+
+    <div class="hobby-text">
+        <p>
+            Schon seit vielen Jahren fasziniert mich die Fliegerei. 
+            Da ich den Wunsch habe, später selbst Pilot zu werden, 
+            habe ich vor einem Jahr mit meiner Segelfluglizenz im Aero-Club Braunschweig begonnen. 
+            Ich habe dabei bereits mit Freude schon viele Flugstunden gesammelt.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="hobby">
+
+    <button class="hobby-button" onclick="toggleText(this)">
+        Fußball <span>+</span>
+    </button>
+
+    <div class="hobby-text">
+        <p>
+            Schon in der Grundschule habe ich angefangen, Fußball
+            im Verein zu spielen. Nach Stationen beim BSC Acosta,
+            SV Melverode-Heidberg und Rot-Weiß Volkmarode musste ich
+            aufgrund von Zeitmangel mit dem Vereinsfußball aufhören.
+            Meine Begeisterung für den Sport ist jedoch geblieben:
+            Ich gehe gerne ins Stadion, schaue Fußball im Fernsehen
+            oder spiele mit Freunden auf dem Bolzplatz.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="hobby">
+
+    <button class="hobby-button" onclick="toggleText(this)">
+        Tanzen <span>+</span>
+    </button>
+
+    <div class="hobby-text">
+        <p>
+            Seit fast zwei Jahren betreibe ich aktiv Paartanz in
+            der Tanzschule Häusler Kwiatkowski. Das Tanzen bereitet mir viel
+            Freude und inzwischen habe ich bereits das Deutsche
+            Tanzabzeichen in Gold erhalten.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="hobby">
+
+    <button class="hobby-button" onclick="toggleText(this)">
+        Weitere Interessen <span>+</span>
+    </button>
+
+    <div class="hobby-text">
+        <p>
+           Zu meinen weiteren Interessen gehören Informatik 
+           und gesellschaftliche Themenfelder wie Politik, Geschichte und Geografie.
+        </p>
+    </div>
+
+</div>
+
+
+<nav>
+    <ul>
+        <li><a href="./index.html">Zurück zur Startseite</a></li>
+        <li><a href="./bilder.html">Bilder von mir</a></li>
+        <li><a href="./film.html">Meine Lieblingsfilme, Spiele und Musik</a></li>
+    </ul>
+</nav>
+
+
+<footer class="site-footer">
+    <p>&copy; 2026 Klemens Theeg</p>
+</footer>
+
+
+<script>
+
+function toggleText(button) {
+
+    const text = button.nextElementSibling;
+    const symbol = button.querySelector("span");
+
+    if (text.style.display === "block") {
+        text.style.display = "none";
+        symbol.textContent = "+";
+    } else {
+        text.style.display = "block";
+        symbol.textContent = "−";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

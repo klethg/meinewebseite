@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+    <h1>Mein Schüleraustausch in China, in den Städten Peking, Xi`an und Shanghai</h1>
+
+    <div class="galerie">
+
+        <img src="Meine Webseite/bilder china/sh1.png" alt="Shanghai Bild 1">
+        <img src="Meine Webseite/bilder china/sh2.png" alt="Shanghai Bild 2">
+        <img src="Meine Webseite/bilder china/sh3.png" alt="Shanghai Bild 3">
+        <img src="Meine Webseite/bilder china/sh4.png" alt="Shanghai Bild 4">
+
+        <img src="Meine Webseite/bilder china/IMG_6334.jpeg" alt="Xi'an Bild 1">
+        <img src="Meine Webseite/bilder china/IMG_6307.jpeg" alt="Xi'an Bild 2">
+        <img src="Meine Webseite/bilder china/IMG_6272.jpeg" alt="Xi'an Bild 3">
+        <img src="Meine Webseite/bilder china/IMG_6245.jpeg" alt="Xi'an Bild 5">
+
+        <img src="Meine Webseite/bilder china/IMG_5979.jpeg" alt="Peking Bild 2">
+        <img src="Meine Webseite/bilder china/p2.png" alt="Peking Bild 3">
+        <img src="Meine Webseite/p1.png" alt="Peking Bild 4">
+        <img src="Meine Webseite/bilder china/IMG_5781.jpeg" alt="Peking Bild 5">
+
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="bilder.html">Zurück</a></li>
+        </ul>
+    </nav>
+
+    <!-- Große Bildansicht -->
+    <div id="lightbox" class="lightbox">
+        <span class="schliessen">&times;</span>
+        <img id="grossesBild" src="" alt="Große Bildansicht">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const bilder = document.querySelectorAll(".galerie img");
+        const lightbox = document.getElementById("lightbox");
+        const grossesBild = document.getElementById("grossesBild");
+        const schliessen = document.querySelector(".schliessen");
+
+        bilder.forEach(function(bild) {
+            bild.addEventListener("click", function() {
+                lightbox.style.display = "flex";
+                grossesBild.src = bild.src;
+            });
+        });
+
+        schliessen.addEventListener("click", function() {
+            lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", function(event) {
+            if (event.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
